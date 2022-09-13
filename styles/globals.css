@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap");
+
+body {
+	min-height: 100vh;
+	background-position: center;
+	background-image: url("../assets/home/background-home-mobile.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	transition: 1s;
+}
+
+@media screen and (min-width: 425px) {
+	body {
+		background-image: url("../assets/home/background-home-tablet.jpg");
+	}
+}
+@media screen and (min-width: 768px) {
+	body {
+		background-image: url("../assets/home/background-home-desktop.jpg");
+	}
+}
