@@ -9,14 +9,14 @@ const Navbar = () => {
 	const [nav, setNav] = useState("false");
 
 	return (
-		<div className='flex items-center justify-between w-full h-full p-6'>
+		<div className='flex items-center justify-between h-[6rem] my-6 ml-[3.4rem]'>
 			<div>
-				<Image src={logo} width={40} height={40} />
+				<Image src={logo} />
 			</div>
 
 			{/* Desktop design */}
-			<div className='hidden xs:flex  h-full bg-[#979797]'>
-				<ul>
+			<div className='hidden items-center xs:flex bg-[#979797]'>
+				<ul className=''>
 					<li>home</li>
 					<li>destination</li>
 					<li>crew</li>
