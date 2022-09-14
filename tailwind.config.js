@@ -10,6 +10,9 @@ module.exports = {
 				xs: "425px",
 			},
 		},
+		fontFamily: {
+			barlowCondensed: "Barlow Condensed, sans-serif",
+		},
 	},
 	plugins: [],
 };
