@@ -5,7 +5,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap");
 
 body {
-	min-height: 100vh;
+	min-height: calc(100vh - 1.5rem);
 	background-position: center;
 	background-image: url("../assets/home/background-home-mobile.jpg");
 	background-repeat: no-repeat;
