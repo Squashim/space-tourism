@@ -6,21 +6,65 @@ import Image from "next/image";
 import Link from "next/link";
 
 const Navbar = () => {
-	const [nav, setNav] = useState("false");
+	const [nav, setNav] = useState(false);
+	const [active, setActive] = useState("home");
 
 	return (
-		<div className='flex items-center justify-between h-[6rem] my-6 ml-[3.4rem]'>
-			<div>
-				<Image src={logo} />
-			</div>
+		<nav className='relative flex items-center justify-between h-[6rem] xs:py-6 xs:pr-0 xs:pl-[3.4rem] p-6 xl:mt-[2.5rem] '>
+			<Image src={logo} />
+
+			{/* Decal */}
+			<div className='right-[830px] left-[160px] hidden xl:block absolute bg-white/25 w-[auto] ml-20 h-[2px] z-10'></div>
 
 			{/* Desktop design */}
-			<div className='hidden items-center xs:flex bg-[#979797]'>
-				<ul className=''>
-					<li>home</li>
-					<li>destination</li>
-					<li>crew</li>
-					<li>technology</li>
+			<div className='hidden h-[96px] items-center xs:flex bg-white/10 backdrop-blur-xl px-12 xl:w-[54rem] '>
+				<ul className='font-barlowCondensed text-blue text-sm xl:text-base flex uppercase  w-full items-center gap-4 lg:gap-8 xl:gap-12 justify-center'>
+					<Link href='/'>
+						<li
+							onClick={() => setActive("home")}
+							className={
+								active === "home"
+									? "xl:flex xl:gap-3 xl:tracking-[2.7px] text-white tracking-[2px] cursor-pointer ease duration-100 border-b-white border-b-4 h-full py-[34px]"
+									: "xl:flex xl:gap-3 xl:tracking-[2.7px] tracking-[2px] text-white cursor-pointer ease duration-100 hover:border-b-white/50 border-b-transparent h-full py-[34px] border-b-4"
+							}>
+							<span className='font-bold hidden xl:inline-block'>00</span>home
+						</li>
+					</Link>
+					<Link href='/destination'>
+						<li
+							onClick={() => setActive("destination")}
+							className={
+								active === "destination"
+									? "xl:flex xl:gap-3 xl:tracking-[2.7px] text-white tracking-[2px] cursor-pointer ease duration-100 border-b-white border-b-4 h-full py-[34px]"
+									: "xl:flex xl:gap-3 xl:tracking-[2.7px] tracking-[2px] text-white cursor-pointer ease duration-100 hover:border-b-white/50 border-b-transparent h-full py-[34px] border-b-4"
+							}>
+							<span className='font-bold hidden xl:inline-block'>01</span>
+							destination
+						</li>
+					</Link>
+					<Link href='/crew'>
+						<li
+							onClick={() => setActive("crew")}
+							className={
+								active === "crew"
+									? "xl:flex xl:gap-3 xl:tracking-[2.7px] text-white tracking-[2px] cursor-pointer ease duration-100 border-b-white border-b-4 h-full py-[34px]"
+									: "xl:flex xl:gap-3 xl:tracking-[2.7px] tracking-[2px] text-white cursor-pointer ease duration-100 hover:border-b-white/50  border-b-transparent h-full py-[34px] border-b-4"
+							}>
+							<span className='font-bold hidden xl:inline-block'>02</span>crew
+						</li>
+					</Link>
+					<Link href='/technology'>
+						<li
+							onClick={() => setActive("technology")}
+							className={
+								active === "technology"
+									? "xl:flex xl:gap-3 xl:tracking-[2.7px] text-white tracking-[2px] cursor-pointer ease duration-100 border-b-white border-b-4 h-full py-[34px]"
+									: "xl:flex xl:gap-3 xl:tracking-[2.7px] tracking-[2px] text-white cursor-pointer ease duration-100 hover:border-b-white/50 border-b-transparent h-full py-[34px] border-b-4"
+							}>
+							<span className='font-bold  hidden xl:inline-block'>03</span>
+							technology
+						</li>
+					</Link>
 				</ul>
 			</div>
 
@@ -37,7 +81,7 @@ const Navbar = () => {
 							? "transition-all duration-100 ease-linear fixed bg-white/10 backdrop-blur-xl font-barlowCondensed z-[1000] top-0 bottom-0 right-0 left-[35%]  h-full"
 							: "transition-all duration-100 ease-linear fixed bg-white/10 backdrop-blur-xl font-barlowCondensed top-0 bottom-0 left-[100%]"
 					}>
-					<div className='p-8 flex items-center justify-end'>
+					<div className='px-6 py-8 flex items-center justify-end'>
 						<Image
 							src={close}
 							width={19}
@@ -47,23 +91,47 @@ const Navbar = () => {
 						/>
 					</div>
 
-					<ul className='pl-4 uppercase text-white w-full'>
-						<li className='flex flex-wrap gap-3 py-1 my-7 tracking-[2.7px] cursor-pointer border-r-4'>
-							<span className='font-bold'>00</span>home
+					<ul className='pl-4 uppercase w-full'>
+						<li
+							onClick={() => setActive("home")}
+							className={
+								active === "home"
+									? "flex gap-3 my-7 text-white tracking-[2.7px] cursor-pointer ease duration-100 border-r-white border-r-4 py-1"
+									: "flex gap-3 my-7 tracking-[2.7px] text-blue cursor-pointer ease duration-100 hover:border-r-white/50 border-r-transparent h-full py-1 border-r-4"
+							}>
+							<span className='font-bold '>00</span>home
 						</li>
-						<li className='flex gap-3 py-1 my-7 tracking-[2.7px] cursor-pointer'>
+						<li
+							onClick={() => setActive("destination")}
+							className={
+								active === "destination"
+									? "flex gap-3 my-7 text-white tracking-[2.7px] cursor-pointer ease duration-100 border-r-white border-r-4 py-1"
+									: "flex gap-3 my-7 tracking-[2.7px] text-blue cursor-pointer ease duration-100 hover:border-r-white/50 border-r-transparent h-full py-1 border-r-4"
+							}>
 							<span className='font-bold'>01</span>destination
 						</li>
-						<li className='flex gap-3 py-1 my-7 tracking-[2.7px] cursor-pointer'>
+						<li
+							onClick={() => setActive("crew")}
+							className={
+								active === "crew"
+									? "flex gap-3 my-7 text-white tracking-[2.7px] cursor-pointer ease duration-100 border-r-white border-r-4 py-1"
+									: "flex gap-3 my-7 tracking-[2.7px] text-blue cursor-pointer ease duration-100 hover:border-r-white/50 border-r-transparent h-full py-1 border-r-4"
+							}>
 							<span className='font-bold'>02</span>crew
 						</li>
-						<li className='flex gap-3 py-1 my-7 tracking-[2.7px] cursor-pointer'>
+						<li
+							onClick={() => setActive("technology")}
+							className={
+								active === "technology"
+									? "flex gap-3 my-7 text-white tracking-[2.7px] cursor-pointer ease duration-100 border-r-white border-r-4 py-1"
+									: "flex gap-3 my-7 tracking-[2.7px] text-blue cursor-pointer ease duration-100 hover:border-r-white/50 border-r-transparent h-full py-1 border-r-4"
+							}>
 							<span className='font-bold'>03</span>technology
 						</li>
 					</ul>
 				</div>
 			</div>
-		</div>
+		</nav>
 	);
 };
 
