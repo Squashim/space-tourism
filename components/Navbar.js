@@ -40,7 +40,7 @@ const Navbar = () => {
 			<Image src={logo} />
 
 			{/* Decal */}
-			<div className='right-[830px] left-[160px] hidden xl:block absolute bg-white/25 w-[auto] ml-20 h-[2px] z-10'></div>
+			<div className='right-[830px] left-[120px] hidden xl:block absolute bg-white/25 w-[auto] ml-20 h-[2px] z-10'></div>
 
 			{/* Desktop design */}
 			<div className='hidden h-[96px] items-center xs:flex bg-white/10 backdrop-blur-xl px-12 xl:w-[54rem] '>
