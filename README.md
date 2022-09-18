@@ -1,34 +1,43 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Frontend Mentor - Space tourism website
 
-## Getting Started
+## Table of contents
 
-First, run the development server:
+- [Screenshot](#screenshot) 
+- [The challenge](#the-challenge)
+- [Links](#links)
+- [Author](#author)
+### Screenshot
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+<table>
+        <tr>
+            <td>
+                <img src="public/mobile.png"
+                    alt="Mobile solution" title="Mobile solution" width="100%"/>
+            </td>
+            <td>
+                <img src="public/desktop.png"
+                    alt="Desktop solution" width="100%" title="Desktop solution"/>
+            </td>
+        </tr>
+</table>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## The challenge
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Your users should be able to:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+- View the optimal layout for each of the website's pages depending on their device's screen size
+- See hover states for all interactive elements on the page
+- View each page and be able to toggle between the tabs to see new information
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-## Learn More
+### Links
 
-To learn more about Next.js, take a look at the following resources:
+- Solution URL: [https://www.frontendmentor.io/solutions/responsive-space-tourism-website-with-next-and-tailwind-Ir9FF_0xI2](https://www.frontendmentor.io/solutions/responsive-space-tourism-website-with-next-and-tailwind-Ir9FF_0xI2)
+- Live Site URL: [https://space-tourism-y0s6p96pa-squashim.vercel.app/](https://space-tourism-y0s6p96pa-squashim.vercel.app/)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Author
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- Website - [@Squashim](https://github.com/Squashim)
+- Frontend Mentor - [@Squashim](https://www.frontendmentor.io/profile/Squashim)
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+**Have fun building!** 🚀
