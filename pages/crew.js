@@ -6,8 +6,8 @@ const Crew = () => {
 	const [currentPerson, setCurrentPerson] = useState(data.crew[0].name);
 
 	return (
-		<div className='w-full transition ease duration-100  xl:px-[10rem]'>
-			<h2 className='text-base text-white uppercase font-barlowCondensed tracking-[2.7px] text-center max-w-[320px] mx-auto xs:mt-10 xs:text-[1.25rem] xs:tracking-[3.3px] xs:text-left xs:max-w-full xl:max-w-[50%] xl:mx-0 xs:pl-9 xl:pl-0 xl:mt-[76px] xl:text-[28px] xl:tracking-[4.7px] mb-8 xl:mb-[48px]'>
+		<div className='w-full transition ease duration-100  xl:pl-[12.5rem]'>
+			<h2 className='xs:mb-[50px] text-base text-white uppercase font-barlowCondensed tracking-[2.7px] text-center max-w-[320px] mx-auto xs:mt-10 xs:text-[1.25rem] xs:tracking-[3.3px] xs:text-left xs:max-w-full xl:max-w-[50%] xl:mx-0 xs:pl-9 xl:pl-0 xl:mt-[76px] xl:text-[28px] xl:tracking-[4.7px] mb-8 xl:mb-[48px]'>
 				<span className='font-bold text-white/25 mr-4 xs:mr-[18px] xl:mr-[28px] '>
 					02
 				</span>
@@ -46,7 +46,7 @@ const Crew = () => {
 								}></div>
 						))}
 					</nav>
-					<div className=' mx-auto xs:max-w-[570px] xl:max-w-full xl:w-full'>
+					<div className=' mx-auto xs:max-w-[570px] xl:mx-0 xl:w-full'>
 						{data.crew.map((person, index) => {
 							if (currentPerson === person.name) {
 								return (

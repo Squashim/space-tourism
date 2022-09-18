@@ -101,7 +101,7 @@ const Navbar = () => {
 					className={
 						nav
 							? "transition-all duration-300 ease-linear fixed bg-white/10 backdrop-blur-xl font-barlowCondensed z-[1000] top-0 bottom-0 right-0 left-[35%]  h-full"
-							: "transition-all duration-300 ease-linear fixed bg-white/10 backdrop-blur-xl font-barlowCondensed top-0 bottom-0 right-0 left-[100%]"
+							: "z-[1000] transition-all duration-300 ease-linear fixed bg-white/10 backdrop-blur-xl font-barlowCondensed top-0 bottom-0 right-0 left-[100%]"
 					}>
 					<div className='px-6 py-8 flex items-center justify-end'>
 						<Image
