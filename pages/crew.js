@@ -1,85 +1,66 @@
 import React, { useState } from "react";
 import data from "../json/data.json";
-import { useWindowSize } from "../hooks/useWindowSize";
 import Image from "next/image";
 
 const Crew = () => {
 	const [currentPerson, setCurrentPerson] = useState(data.crew[0].name);
-	const width = useWindowSize();
 
 	return (
-		<div className='w-full transition ease duration-100 py-2 xl:px-[10rem]'>
-			<h2 className=' text-base text-white uppercase font-barlowCondensed tracking-[2.7px] text-center max-w-[320px] mx-auto xs:mt-10 xs:text-[1.25rem] xs:tracking-[3.3px] xs:text-left xs:max-w-full xs:pl-9 xl:mt-[76px] xl:text-[28px] xl:tracking-[4.7px]'>
+		<div className='w-full transition ease duration-100  xl:px-[10rem]'>
+			<h2 className='text-base text-white uppercase font-barlowCondensed tracking-[2.7px] text-center max-w-[320px] mx-auto xs:mt-10 xs:text-[1.25rem] xs:tracking-[3.3px] xs:text-left xs:max-w-full xl:max-w-[50%] xl:mx-0 xs:pl-9 xl:pl-0 xl:mt-[76px] xl:text-[28px] xl:tracking-[4.7px] mb-8 xl:mb-[48px]'>
 				<span className='font-bold text-white/25 mr-4 xs:mr-[18px] xl:mr-[28px] '>
 					02
 				</span>
 				meet your crew
 			</h2>
 
-			<div className='flex flex-col xl:flex-row xl:max-w-[1280px] w-full mx-auto'>
-				<div className='flex  justify-center mt-8 mb-6 xs:mt-[3.75rem] xs:mb-12 w-full xl:justify-start xl:pl-16 xl:mt-[97px] '>
+			<div className='flex flex-col xl:flex-row  w-full xl:items-end'>
+				<div className='relative xl:mx-0 mx-4 h-[222px] xs:order-2 xs:h-[532px] xl:h-[650px] xl:w-full xl:mt-[-5rem]'>
 					{data.crew.map((person, index) => {
 						if (currentPerson === person.name) {
 							return (
-								<Image
-									src={person.images.png}
-									key={index}
-									alt={person.name}
-									width={width < 600 ? 170 : width >= 1280 ? 445 : 300}
-									height={width < 600 ? 170 : width >= 1280 ? 445 : 300}
-								/>
+								<>
+									<Image
+										src={person.images.png}
+										key={index}
+										alt={person.name}
+										layout='fill'
+										className='object-contain '
+									/>
+									<div className='w-full bg-[#383b4b] h-[1px] absolute bottom-0 xs:hidden'></div>
+								</>
 							);
 						} else return;
 					})}
 				</div>
-				<div className='flex flex-col xl:max-w-[445px] w-full px-4 xs:px-0'>
-					<nav className='xl:pt-16 py-4 max-w-[320px] xl:max-w-[350px] w-full mx-auto flex uppercase text-blue font-barlowCondensed text-sm items-center justify-between xs:text-base xl:mx-0'>
+				<div className='flex flex-col xl:max-w-full w-full px-4 xs:px-0'>
+					<nav className=' py-8 max-w-[320px] xl:max-w-[350px] w-full mx-auto flex items-center justify-center gap-4 xl:gap-[1.5rem] xl:mx-0 xs:order-2 xs:py-[40px] xl:pt-[120px] xl:justify-start'>
 						{data.crew.map((person, index) => (
 							<div
+								onClick={() => setCurrentPerson(person.name)}
 								key={index}
 								className={
 									currentPerson === person.name
-										? "text-white border-b-[3px] pb-2  xl:pb-3 ease duration-200 transition tracking-[2.3px] xs:tracking-[2.7px]"
-										: "pb-2 xl:pb-3 hover:border-b-white/50 border-b-[3px] border-transparent ease duration-200 transition tracking-[2.3px] xs:tracking-[2.7px]"
-								}>
-								<p
-									onClick={() => setCurrentPerson(person.name)}
-									className='cursor-pointer'>
-									{person.name}
-								</p>
-							</div>
+										? "transition ease duration-100 w-[10px] xl:w-[15px] aspect-square bg-white rounded-full cursor-pointer "
+										: "transition ease duration-100 w-[10px] xl:w-[15px] aspect-square bg-white/20 rounded-full cursor-pointer hover:bg-white/50"
+								}></div>
 						))}
 					</nav>
-					<div className='max-w-[320px] mx-auto xs:max-w-[570px]  '>
+					<div className=' mx-auto xs:max-w-[570px] xl:max-w-full xl:w-full'>
 						{data.crew.map((person, index) => {
 							if (currentPerson === person.name) {
 								return (
 									<div key={index}>
-										<h1 className='font-bellefair text-center text-white text-[3.5rem] xs:text-[5rem] uppercase xs:pt-2 xl:text-[6.25rem] xl:text-left'>
+										<p className=' font-bellefair text-center text-white/50 text-base uppercase xs:text-[1.5rem] xl:text-[2rem] xl:text-left'>
+											{person.role}
+										</p>
+										<h1 className='font-bellefair text-white text-center text-[1.5rem] uppercase mb-4 xl:mt-4 xs:text-[40px] xl:text-[56px] xl:text-left'>
 											{person.name}
 										</h1>
-										<p className='font-barlow text-blue text-center text-[15px] xs:text-base leading-6 xs:leading-7 xl:text-lg xl:leading-8 xl:text-left'>
-											{person.description}
+
+										<p className='xl:max-w-[450px] text-[15px] text-blue font-barlow text-center leading-[25px] xs:text-base xs:leading-[28px] xl:text-[18px] xl:text-left'>
+											{person.bio}
 										</p>
-										<div className='w-full bg-[#383b4b] h-[1px] my-8 xs:mt-12'></div>
-										<div className='flex flex-col xs:flex-row  xs:justify-around xl:justify-start xl:gap-[80px]'>
-											<div className='flex flex-col gap-3 mb-8'>
-												<h2 className='text-blue uppercase font-barlow text-sm text-center xl:text-left '>
-													avg. distance
-												</h2>
-												<p className='text-white uppercase font-bellefair text-[28px] text-center xl:text-left'>
-													{person.distance}
-												</p>
-											</div>
-											<div className='flex flex-col gap-3'>
-												<h2 className='text-blue uppercase font-barlow text-sm text-center xl:text-left'>
-													est. travel time
-												</h2>
-												<p className='text-white uppercase font-bellefair text-[28px] text-center xl:text-left'>
-													{person.travel}
-												</p>
-											</div>
-										</div>
 									</div>
 								);
 							} else return;
