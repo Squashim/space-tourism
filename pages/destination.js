@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import data from "../json/data.json";
 import { useWindowSize } from "../hooks/useWindowSize";
 
-export const destination = () => {
+export const Destination = () => {
 	const [currentPlanet, setCurrentPlanet] = useState("Moon");
 	const width = useWindowSize();
 	return (
@@ -90,4 +90,4 @@ export const destination = () => {
 	);
 };
 
-export default destination;
+export default Destination;
