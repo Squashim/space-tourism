@@ -18,19 +18,19 @@ const Navbar = () => {
 				document.body.className = "home";
 				setActive("/");
 				break;
-			case "/Destination":
+			case "/destination":
 				document.body.className = "destination";
-				setActive("/Destination");
+				setActive("/destination");
 
 				break;
-			case "/Crew":
+			case "/crew":
 				document.body.className = "crew";
-				setActive("/Crew");
+				setActive("/crew");
 
 				break;
-			case "/Technology":
+			case "/technology":
 				document.body.className = "technology";
-				setActive("/Technology");
+				setActive("/technology");
 		}
 	}, [router.asPath]);
 
@@ -55,10 +55,10 @@ const Navbar = () => {
 							<span className='font-bold hidden xl:inline-block'>00</span>home
 						</li>
 					</Link>
-					<Link href='/Destination'>
+					<Link href='/destination'>
 						<li
 							className={
-								active === "/Destination"
+								active === "/destination"
 									? "xl:flex xl:gap-3 xl:tracking-[2.7px] text-white tracking-[2px] cursor-pointer ease duration-100 border-b-white border-b-4 h-full py-[34px]"
 									: "xl:flex xl:gap-3 xl:tracking-[2.7px] tracking-[2px] text-white cursor-pointer ease duration-100 hover:border-b-white/50 border-b-transparent h-full py-[34px] border-b-4"
 							}>
@@ -66,20 +66,20 @@ const Navbar = () => {
 							destination
 						</li>
 					</Link>
-					<Link href='/Crew'>
+					<Link href='/crew'>
 						<li
 							className={
-								active === "/Crew"
+								active === "/crew"
 									? "xl:flex xl:gap-3 xl:tracking-[2.7px] text-white tracking-[2px] cursor-pointer ease duration-100 border-b-white border-b-4 h-full py-[34px]"
 									: "xl:flex xl:gap-3 xl:tracking-[2.7px] tracking-[2px] text-white cursor-pointer ease duration-100 hover:border-b-white/50  border-b-transparent h-full py-[34px] border-b-4"
 							}>
 							<span className='font-bold hidden xl:inline-block'>02</span>crew
 						</li>
 					</Link>
-					<Link href='/Technology'>
+					<Link href='/technology'>
 						<li
 							className={
-								active === "/Technology"
+								active === "/technology"
 									? "xl:flex xl:gap-3 xl:tracking-[2.7px] text-white tracking-[2px] cursor-pointer ease duration-100 border-b-white border-b-4 h-full py-[34px]"
 									: "xl:flex xl:gap-3 xl:tracking-[2.7px] tracking-[2px] text-white cursor-pointer ease duration-100 hover:border-b-white/50 border-b-transparent h-full py-[34px] border-b-4"
 							}>
@@ -127,11 +127,11 @@ const Navbar = () => {
 								<span className='font-bold '>00</span>home
 							</li>
 						</Link>
-						<Link href='/Destination'>
+						<Link href='/destination'>
 							<li
 								onClick={() => setNav(false)}
 								className={
-									active === "/Destination"
+									active === "/destination"
 										? "flex gap-3 my-7 text-white tracking-[2.7px] cursor-pointer ease duration-100 border-r-white border-r-4 py-1"
 										: "flex gap-3 my-7 tracking-[2.7px] text-blue cursor-pointer ease duration-100 hover:border-r-white/50 border-r-transparent h-full py-1 border-r-4"
 								}>
@@ -139,22 +139,22 @@ const Navbar = () => {
 							</li>
 						</Link>
 
-						<Link href='/Crew'>
+						<Link href='/crew'>
 							<li
 								onClick={() => setNav(false)}
 								className={
-									active === "/Crew"
+									active === "/crew"
 										? "flex gap-3 my-7 text-white tracking-[2.7px] cursor-pointer ease duration-100 border-r-white border-r-4 py-1"
 										: "flex gap-3 my-7 tracking-[2.7px] text-blue cursor-pointer ease duration-100 hover:border-r-white/50 border-r-transparent h-full py-1 border-r-4"
 								}>
 								<span className='font-bold'>02</span>crew
 							</li>
 						</Link>
-						<Link href='/Technology'>
+						<Link href='/technology'>
 							<li
 								onClick={() => setNav(false)}
 								className={
-									active === "/Technology"
+									active === "/technology"
 										? "flex gap-3 my-7 text-white tracking-[2.7px] cursor-pointer ease duration-100 border-r-white border-r-4 py-1"
 										: "flex gap-3 my-7 tracking-[2.7px] text-blue cursor-pointer ease duration-100 hover:border-r-white/50 border-r-transparent h-full py-1 border-r-4"
 								}>
